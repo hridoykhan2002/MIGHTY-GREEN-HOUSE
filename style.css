@@ -1,0 +1,323 @@
+/****************** starup ****************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Raleway:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    transition: all ease-in-out .3s;
+}
+:root{
+    --mainColor:#7ed957;
+    --mainColor2:#008037;
+    --mainColor3:#ffde59;
+    --headingtext: 'Montserrat', sans-serif;
+    --paratext: 'Roboto', sans-serif;
+}
+/***************** basic *****************/
+body{
+    scroll-behavior: smooth;
+    height: 200vh;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body li{
+    list-style: none;
+}
+body h1{
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 45px;
+    font-family: var(--headingtext);
+}
+body h3{
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 25px;
+    font-family: var(--headingtext);
+}
+body a{
+    text-decoration: none;
+    font-family: var(--paratext);
+    font-weight: 400;
+}
+body p{
+    letter-spacing: .5px;
+    font-family: var(--paratext);
+    font-weight: 400;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    padding: 70px 100px;
+}
+.section-header{
+    margin-bottom: 50px;
+}
+.section-header p{
+    margin-top: 20px;
+}
+/* header */
+/* promobar */
+.promobar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0 90px;
+    border-bottom: 1px solid var(--mainColor);
+}
+.promobar p{
+    font-size: 14px;
+}
+.promobar p i{
+    padding-right: 10px;
+}
+.promo-left p{
+    color: var(--mainColor2);
+}
+.promo-left p i{
+    color: #000;
+}
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+nav img{
+    width: 150px;
+}
+nav a{
+    color: #000;
+    text-transform: uppercase;
+    padding-right: 20px;
+    font-size: 14px;
+}
+.nav-active{
+    color: var(--mainColor);
+    font-weight: 500;
+}
+.nav-cart i{
+    padding-right: 2px;
+    color: var(--mainColor2);
+}
+.nav-cart{
+    border: 2px solid var(--mainColor);
+    padding: 7px 20px;
+    background: var(--mainColor);
+    color: #fff;
+}
+/* hero */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.144) ,rgba(0, 0, 0, 0.562)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 0 150px;
+}
+.hero h5{
+    font-family: var(--headingtext);
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.hero h1{
+    font-size: 55px;
+    margin-bottom: 20px;
+    line-height: 55px;
+}
+.hero span{
+    color: var(--mainColor);
+}
+.hero p{
+    font-size: 14px;
+}
+.hero i{
+    padding: 10px 20px;
+    border: 2px solid var(--mainColor);
+    margin: 20px 5px 0 5px;
+    color: var(--mainColor);
+}
+/* category */
+.category{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+    gap: 4%;
+}
+.categoryContent{
+    position: relative;
+    height: 300px;
+}
+.category article article{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000081;
+}
+.categoryContent i{
+    padding: 20px;
+    font-size: 20px;
+    background-color: var(--mainColor2);
+    color: #fff;
+}
+.categoryContent div{
+    color: #fff;
+}
+.category h3{
+    padding: 5px 0;
+    font-size: 18px;
+}
+.categoryContent p{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 13px;
+}
+/* sale */
+.sale{
+    padding: 70px 50px;
+}
+.sale-data{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.sale-content{
+    padding: 20px 20px;
+    border-radius: .4rem;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(128, 128, 128, 0.158), -10px -10px 20px rgba(128, 128, 128, 0.171);
+}
+.sale-content img{
+    height: 150px;
+}
+.sale-content h3{
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.sale-active{
+    background-color: var(--mainColor2);
+    color: #fff !important;
+}
+.sale p{
+    font-size: 15px;
+    margin-top: 8px;
+}
+.sale p span{
+    font-weight: bold;
+    color: var(--mainColor2);
+}
+/* services */
+.serviceData{
+    display: grid;
+    background-color: var(--mainColor);
+    grid-template-columns: 47% 50%;
+    justify-content: space-between;
+    color: #fff;
+}
+.serviceData2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: var(--mainColor2);
+    color: #fff;
+}
+.serviceData2 a{
+    background-color: #fff !important;
+    color: #000 !important;
+}
+.serviceContent2{
+    padding: 40px;
+}
+.serviceContent2 img{
+    height: 100% !important;
+    width: 100%;
+}
+.service h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.service h3{
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+.service a{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    margin-right: 10px;
+}
+.service p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* youtube */
+.yt{
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.yt h3{
+    font-size: 45px;
+    color: var(--heroTextColor);
+    margin-bottom: 20px;
+}
+.yt p{
+    margin-bottom: 20px;
+}
+.yt i{
+    font-size: 30px;
+    padding: 10px 15px;
+}
+.yt .fa-facebook{
+    background-color: #4267B2;
+    color: #fff;
+}
+.yt .fa-twitter{
+    background-color: #00acee;
+    color: #fff;
+    padding: 10px 10px !important;
+}
+.yt .fa-instagram{
+    background-color: #dd2a7b;
+    color: #fff;
+    padding: 10px 10px !important;
+}
+.yt .fa-youtube{
+    background-color: #c4302b;
+    color: #fff;
+    padding: 10px 10px !important;
+}
+.ytIcons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.yt .fa-linkedin{
+    background-color: #0e76a8;
+    color: #fff;
+    padding: 10px 10px !important;
+}
